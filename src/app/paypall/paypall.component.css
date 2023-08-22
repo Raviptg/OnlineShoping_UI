@@ -1,0 +1,13 @@
+.c{
+    display: flex;
+    justify-content: center;
+}
+.a{
+    margin-left: 65px;
+}
+.n{
+    color: black;
+}
+.btn:hover{
+    color: #fbaf00e8;
+}

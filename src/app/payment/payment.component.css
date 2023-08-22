@@ -1,0 +1,54 @@
+.v{
+    height: 540px;
+            border-left: 1px solid #000900;
+            position: absolute;
+            left: 50%;
+            margin-top: 10px;
+}
+.p{
+    margin-top: 15px;
+}
+
+.y {
+    overflow-y: auto;
+    height: 500px;
+}
+.pay{
+    background-color: #fbaf00e8;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+}
+.h{
+    width: 400px;
+    padding: 25px;
+    height: 450px;
+    margin-left: 15px;
+}
+.w{
+    width: 441px;
+}
+.t {
+    width: 440px;
+    display: flex;
+    padding-left: 80px;
+}
+.m{
+    margin-top: -10px;
+}
+.l{
+    margin-top: -10px;
+    margin-left: 80px;
+}
+.money{
+    font-size: 15px;
+}
+.container-fluid{
+    margin-top: -20px;
+}
+.nav-link{
+    cursor: pointer;
+}
+.btn:hover{
+    color: #fbaf00e8;
+}

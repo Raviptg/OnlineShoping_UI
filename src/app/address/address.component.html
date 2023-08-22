@@ -1,0 +1,335 @@
+<div class="container-fluid bg-light">
+  <div class="container bg-light" style="margin-top: 30px">
+    <div class="row mt-4" style="height: 570px">
+      <div class="col"></div>
+      <div
+        class="col-md-6 bg-white fm shadow needs-validation"
+        style="border-radius: 10px"
+        novalidate
+      >
+        <div class="card bg-warning mt-3">
+          <h4 class="text-black pt-2" style="text-align: center">User Info</h4>
+        </div>
+        <form
+          name="form"
+          #f="ngForm"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          novalidate
+          [appMatchPassword]="['password', 'confirmPassword']"
+        >
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="fullname"
+                    [(ngModel)]="form.fullname"
+                    placeholder="FullName"
+                    required
+                    #fullname="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && fullname.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && fullname.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="fullname.errors['required']">
+                      Fullname is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="lastname"
+                    [(ngModel)]="form.lastname"
+                    placeholder="lastname"
+                    required
+                    #lastname="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && lastname.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && lastname.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="lastname.errors['required']">
+                      Lastname is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    [(ngModel)]="form.email"
+                    placeholder="Email"
+                    required
+                    email
+                    #email="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && email.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="email.errors['required']">
+                      Email is required
+                    </div>
+                    <div *ngIf="email.errors['email']">Email is invalid</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="phonenumber"
+                    [(ngModel)]="form.phonenumber"
+                    placeholder="phonenumber"
+                    required
+                    #phonenumber="ngModel"
+                    [ngClass]="{
+                      'is-invalid': f.submitted && phonenumber.errors
+                    }"
+                  />
+                  <div
+                    *ngIf="f.submitted && phonenumber.errors"
+                    class="invalid-feedback"
+                  >
+                    <div *ngIf="phonenumber.errors['required']">
+                      phonenumber is required
+                    </div>
+                    <div *ngIf="phonenumber.errors['email']">
+                      phonenumber is invalid
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>Address</p>
+            <hr />
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="drno"
+                    [(ngModel)]="form.drno"
+                    placeholder="Door No"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #drno="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && drno.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && drno.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="drno.errors['required']">
+                      Door No is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="landmark"
+                    [(ngModel)]="form.landmark"
+                    placeholder="Landmark"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #landmark="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && landmark.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && landmark.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="landmark.errors['required']">
+                      LandMark is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="village"
+                    [(ngModel)]="form.village"
+                    placeholder="village"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #village="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && village.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && village.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="village.errors['required']">
+                      Village is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="mandel"
+                    [(ngModel)]="form.mandel"
+                    placeholder="mandel"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #mandel="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && mandel.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && mandel.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="mandel.errors['required']">
+                      Mandel is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="district"
+                    [(ngModel)]="form.district"
+                    placeholder="District"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #district="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && district.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && district.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="district.errors['required']">
+                      District is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="state"
+                    [(ngModel)]="form.state"
+                    placeholder="State"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #state="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && state.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && state.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="state.errors['required']">
+                      State is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="pincode"
+                    [(ngModel)]="form.pincode"
+                    placeholder="pincode"
+                    required
+                    minlength="6"
+                    maxlength="40"
+                    #pincode="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && pincode.errors }"
+                  />
+                  <div
+                    *ngIf="f.submitted && pincode.errors"
+                    class="invalid-feedback"
+                  >
+                    <span *ngIf="pincode.errors['required']">
+                      Pincode is required
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <button
+              class="btn btn-outline-primary bt"
+              type="button"
+              (click)="back()"
+            >
+              Back
+            </button>
+
+            <button
+              class="btn btn-outline-primary bt"
+              type="button"
+              (click)="onReset(f)"
+            >
+              Reset
+            </button>
+
+            <button
+              class="btn btn-outline-primary bt"
+              type="submit"
+              (click)="forms()"
+            >
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

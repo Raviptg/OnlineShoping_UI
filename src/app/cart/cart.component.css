@@ -1,0 +1,45 @@
+.p{
+    background-color: yellow;
+    width: 1250px;
+    height: 600px;
+    background: url("/assets/s.avif");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+}
+.height {
+    height: 500px;
+    width: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1266px;
+}
+.b{
+    margin-top: -20px;
+    
+}
+.u{
+    cursor: pointer;
+}
+.btn{
+    font-size: 13px;
+}
+.bt{
+    display: flex;
+    justify-content: space-around;
+}
+.btn:hover{
+    color: #fbaf00e8;
+}
+
+.text-body {
+    cursor: pointer;
+}
+.v{
+    height: 540px;
+            position: absolute;
+            left: 50%;
+            margin-top: 10px;
+}

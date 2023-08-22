@@ -1,0 +1,44 @@
+.input-group{
+    margin-top: 20px;
+}
+
+.col-md-6{
+    background: url("/assets/s.avif");
+    background-repeat: no-repeat;
+    height: 460px;
+    width: 600px;
+    background-size: auto;
+    background-size: cover;
+}
+
+.input-group-text{
+width: 100px;
+}
+
+.text-primary{
+    color: white;
+}
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+.bt{
+    color: white;
+    border-color: white;
+}
+
+.register{
+    margin-top: 20px;
+}
+
+.btn-outline-primary {
+    --bs-btn-hover-bg: #fbaf00e8;
+    --bs-btn-active-bg: #fbaf00e8;
+}
+.error{
+    color: red;
+   }
+
+   

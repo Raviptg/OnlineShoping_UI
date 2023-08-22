@@ -1,0 +1,32 @@
+.p{
+    background-color: yellow;
+    width: 1000px;
+    height: 620px;
+    padding: 25px;
+    background: url("/assets/s.avif");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+}
+
+.bt{
+    display: block;
+}
+
+.btn:hover{
+
+    color: #fbaf00e8;
+}
+.text-body{
+    cursor: pointer;
+}
+.height {
+    height: 450px;
+    width: 700px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px;
+}
+.j{
+  justify-content: space-between;
+}

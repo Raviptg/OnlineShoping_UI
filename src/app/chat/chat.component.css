@@ -1,0 +1,9 @@
+.btn-outline-primary {
+    --bs-btn-hover-bg: #fbaf00e8;
+    --bs-btn-active-bg: #fbaf00e8;
+}
+
+.bt{
+    color: white;
+    border-color: white;
+}

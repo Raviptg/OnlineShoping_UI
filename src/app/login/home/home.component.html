@@ -1,0 +1,46 @@
+<div class="container-fluid bg-light">
+  <div class="container bg-light" style="margin-top: 60px">
+    <div class="row mt-4" style="height: 500px">
+      <div class="col"></div>
+      <div class="col-md-6 bg-white shadow">
+        <div class="card bg-warning mt-4">
+          <h4 class="text-black ps-3 pt-2 pb-2" style="text-align: center">
+            Welcome To OnLine Shoping
+          </h4>
+        </div>
+
+        <h6 class="text mt-4" style="color: rgb(7, 7, 7)">
+          Please Enter Your Credentials
+        </h6>
+
+        <div class="container">
+          <form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onSubmit(loginForm.value)" novalidate>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input [(ngModel)]="Email" name="Email" type="Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input [(ngModel)]="Password" type="Password" 
+               name="Password" class="form-control" required>
+            </div>
+           
+            <div class="error" > {{errorMsg}} </div>
+            <div class="button">
+            <button type="reset" class="btn btn-outline-primary bt " (click)="reset(loginForm)">Reset</button>
+            <button type="submit" class="btn btn-outline-primary bt " (click)="Login()" [disabled]="!loginForm.valid">Submit</button>
+          </div>
+          </form>
+        </div>
+
+        <div class="register">
+          <div class="text-black">
+            If you don't have Credentials... Please
+            <a routerLink="/registration" class="btn btn-link">Register Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
